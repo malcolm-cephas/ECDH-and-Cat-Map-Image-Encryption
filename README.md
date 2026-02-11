@@ -26,19 +26,19 @@ The following flowchart illustrates how an image is securely encrypted using ECD
 
 ```mermaid
 flowchart TD
-    A([Start: Select Image]) --> B{Receiver Keys Exist?};
+    A(["Start: Select Image"]) --> B{"Receiver Keys Exist?"};
     B -- No --> C[Generate & Save Receiver Keys];
     B -- Yes --> D[Load Receiver Public Key];
     C --> D;
     D --> E[Sender Generates Ephemeral Key Pair];
     E --> F[ECDH Key Exchange];
     F --> G[Derive Shared Secret];
-    G --> H[Derive AES Key (HKDF + Salt)];
+    G --> H["Derive AES Key (HKDF + Salt)"];
     H --> I[Generate Seed from Key];
     I --> J[Scramble Image Pixel Data];
-    J --> K[Encrypt Scrambled Data (AES-GCM)];
-    K --> L[Append Metadata: Salt, IV, Tag, Sender PubKey];
-    L --> M([End: Save .enc File]);
+    J --> K["Encrypt Scrambled Data (AES-GCM)"];
+    K --> L["Append Metadata: Salt, IV, Tag, Sender PubKey"];
+    L --> M(["End: Save .enc File"]);
 ```
 
 ### 2. Decryption Process
@@ -46,16 +46,16 @@ The decryption process reverses the steps, ensuring only the holder of the priva
 
 ```mermaid
 flowchart TD
-    AA([Start: Select .enc File]) --> BB[Parse File Header];
-    BB --> CC[Extract: Salt, IV, Tag, Sender PubKey];
+    AA(["Start: Select .enc File"]) --> BB[Parse File Header];
+    BB --> CC["Extract: Salt, IV, Tag, Sender PubKey"];
     CC --> DD[Load Receiver Private Key];
     DD --> EE[ECDH Key Exchange];
     EE --> FF[Derive Shared Secret];
-    FF --> GG[Derive AES Key (HKDF + Salt)];
-    GG --> HH[Decrypt Data (AES-GCM)];
+    FF --> GG["Derive AES Key (HKDF + Salt)"];
+    GG --> HH["Decrypt Data (AES-GCM)"];
     HH --> II[Re-generate Seed from Key];
     II --> JJ[Unscramble Pixel Data];
-    JJ --> KK([End: Save Decrypted Image]);
+    JJ --> KK(["End: Save Decrypted Image"]);
 ```
 
 ## Project Structure
