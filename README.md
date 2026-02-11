@@ -63,7 +63,6 @@ flowchart TD
 *   `Codes/Encrypt_ECDH_v9.py`: The main application for image encryption and decryption.
 *   `Codes/Cryptographic attack Sim.py`: A simulation tool to test the system against common cryptographic attacks.
 *   `Codes/Image analysis.py`: Helper script for image analysis (if applicable).
-*   `Revised Report.pdf`: Detailed project report (documentation).
 
 ## Prerequisites
 
@@ -117,6 +116,21 @@ pip install cryptography numpy opencv-python matplotlib scikit-image scipy pydic
 *   **Encryption**: AES-256 in GCM mode with a random 96-bit IV.
 *   **Scrambling**: The image pixels are shuffled using a seeded random number generator (NumPy) before encryption to flatten the histogram and reduce correlation.
 
+## Authors
+
+**Malcolm Cephas**
+- GitHub: [@malcolm-cephas](https://github.com/malcolm-cephas)
+
+**Shalini Sinha**
+- GitHub: [@Shalini-git-hub](https://github.com/Shalini-git-hub)
+
+**A B Vishvajeeth**
+- GitHub: [@ABVishvajeeth](https://github.com/ABVishvajeeth)
+
+**Medhansh Jani**
+
+
 ## License
 
 [Use the license appropriate for your project, e.g., MIT License]
+
