@@ -130,7 +130,5 @@ pip install cryptography numpy opencv-python matplotlib scikit-image scipy pydic
 **Medhansh Jani**
 
 
-## License
 
-[Use the license appropriate for your project, e.g., MIT License]
 
