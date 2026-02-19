@@ -118,16 +118,19 @@ pip install cryptography numpy opencv-python matplotlib scikit-image scipy pydic
 
 ## Authors
 
-**Malcolm Cephas**
+
+*Malcolm Cephas*
 - GitHub: [@malcolm-cephas](https://github.com/malcolm-cephas)
+  
+*Shalini Sinha*
+- GitHub: [@Shalini-sinha-codes](https://github.com/shalini-sinha-codes)
+  
+*A B Vishvajeeth*
+- GitHub: [@ABVishvajeeth](https://github.com/ABVishvajeeth) 
 
-**Shalini Sinha**
-- GitHub: [@Shalini-git-hub](https://github.com/Shalini-git-hub)
-
-**A B Vishvajeeth**
-- GitHub: [@ABVishvajeeth](https://github.com/ABVishvajeeth)
 
 **Medhansh Jani**
+
 
 
 
